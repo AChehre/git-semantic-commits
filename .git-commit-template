@@ -1,0 +1,50 @@
+
+# messages:
+# 
+#     <type>(<scope>): <subject>
+#     <BLANK LINE>
+#     <body>
+#     <BLANK LINE>
+#     <footer>
+# 
+# Please note that:
+#  - The HEADER is a single line of max. 72 characters that         
+#    contains a succinct description of the change. It contains a   
+#    type, an optional scope, and a subject
+#       + <type> describes the kind of change that this commit is   
+#                providing. Allowed types are:
+#
+#		             feat:		A new feature
+#		             fix:		A bug fix
+#		             perf:		A code change that improves performance
+#		             refactor:	A code change that neither fixes a bug nor adds a feature
+#		             chore:		updating gulp tasks etc.
+#		             vendor:	update version for dependencies, packages.
+#		             build:		Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
+#		             ci:		Changes to our CI configuration files and scripts (example scopes: Circle, BrowserStack, SauceLabs)
+#		             docs:		Documentation only changes
+#		             style:		Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+#		             test:		Adding missing tests or correcting existing tests
+#
+#       + <scope> can be anything specifying the place of the commit    
+#                 change
+#
+#       + <subject> is a very short description of the change, in   
+#                   the following format:
+#             * imperative, present tense: “change” not             
+#               “changed”/“changes”
+#             * capitalised first letter (based on your team standard)
+#             * no dot (.) at the end
+#  - The BODY should include the motivation for the change and      
+#    contrast this with previous behavior and must be phrased in   
+#    imperative present tense 
+#
+#  - The FOOTER should contain any information about Breaking       
+#    Changes and is also the place to reference GitHub issues that   
+#    this commit closes
+#
+# https://backlog.com/blog/git-commit-messages-bold-daring/
+# https://github.com/angular/angular/blob/master/CONTRIBUTING.md
+# git template command:
+# $ git config --get commit.template
+# $ git config --local commit.template ".git-commit-template"
