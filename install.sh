@@ -1,11 +1,12 @@
 #!/bin/bash
-CWD=`pwd`
+CWD=$(pwd)
+GitCommands=$CWD+'/git-commands' 
 
 # Register semantic commits scripts execution path
 #
 # $1 — shell configuraton file path
 function register_path {
-  PATH_LINE='export PATH=$PATH:'$CWD':$PATH'
+  PATH_LINE='export PATH=$PATH:'$GitCommands':$PATH'
 
   if [ -f $1 ]; then
     if ! grep -Fxq "$PATH_LINE" $1; then
@@ -51,7 +52,7 @@ if [[ -n $1 ]] && [[ $1 == '--scripts' ]]; then
   if command_succes 'git extras'; then
     extra_aliases=( 'ch' 'rf' )
     for extra_alias in "${extra_aliases[@]}"; do
-      mv $CWD/.git-$extra_alias $CWD/git-$extra_alias
+      mv $GitCommands/.git-$extra_alias $GitCommands/git-$extra_alias
     done
   fi
 else

@@ -7,21 +7,19 @@ These are **very simple** custom git commands that enforce the git user to write
 
 ## Installation:
 
-1. Clone this repo, preferably in your $HOME directory. ```git clone https://github.com/fteem/git-semantic-commits ~/.git-semantic-commits```
+1. Clone this repo, preferably in your $HOME directory. ```git clone https://github.com/AChehre/git-semantic-commits ~/.git-semantic-commits```
 
   Tip: If you're using Cygwin, open it and type 'echo $USERPROFILE'. This will show you the location of the $HOME directory.
 
 2. Install it as a set of bash scripts or git aliases:
-  * bash scripts: ```cd ~/.git-semantic-commits && ./install.sh --scripts```
-  * git aliases ```cd ~/.git-semantic-commits && ./install.sh```
+  * bash scripts: ```./install.sh --scripts```
+  * git aliases ```./install.sh```
 
   Tip: Installation script is idempotent and could be harmlessly executed multiple times. It adds bash scripts to the PATH in your `~/.bashrc` or `~/.zshrc` files or adds git aliases to the `~/.gitconfig` file respectively (without any duplication).
 
 3. Commit away!
 
 ## Usage
-
-There are 8 new Git commands now.
 
 New command -> what it does:
 
@@ -33,6 +31,9 @@ New command -> what it does:
 * ```git style "commit message here"``` -> ```git commit -m 'style: commit message here'```
 * ```git test "commit message here"``` -> ```git commit -m 'test: commit message here'```
 * ```git localize "commit message here"``` -> ```git commit -m 'localize: commit message here'```
+* ```git ci "commit message here"``` -> ```git commit -m 'ci: commit message here'```
+* ```git vendor "commit message here"``` -> ```git commit -m 'vendor: commit message here'```
+* ```git build "commit message here"``` -> ```git commit -m 'build: commit message here'```
 
 If you would like to add an optional scope, as described [here](https://conventionalcommits.org/), use the '-s' flag and quote the scope message:
 
@@ -48,5 +49,6 @@ Aliases for those who use [git-extras](https://github.com/tj/git-extras) (will b
 * ```git rf "commit message here"``` -> ```git commit -m 'refactor: commit message here'```
 * ```git ch "commit message here"``` -> ```git commit -m 'chore: commit message here'```
 
-## How to contribute
-Open a pull request/issue or fork this repo and submit your changes via a pull request.
+
+----
+This document forked from https://github.com/fteem/git-semantic-commits
