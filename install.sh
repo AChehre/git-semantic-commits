@@ -1,6 +1,6 @@
 #!/bin/bash
 CWD=$(pwd)
-GitCommands=$CWD+'/git-commands' 
+GitCommands=$CWD'/git-commands' 
 
 # Register semantic commits scripts execution path
 #
