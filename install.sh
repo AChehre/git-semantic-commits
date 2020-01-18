@@ -58,11 +58,20 @@ if [[ -n $1 ]] && [[ $1 == '--scripts' ]]; then
 else
   echo 'Installing git aliases…'
 
-  semantic_aliases=( 'chore' 'docs' 'feat' 'fix' 'localize' 'chore' 'refactor' 'style' 'test' 'vendor' 'ci' 'build' )
+  semantic_aliases=( 'chore' 'docs' 'feat' 'fix' 'localize' 'chore' 'refactor' 'style' 'test' 'vendor' 'ci' 'build' 'perf' )
 
   for semantic_alias in "${semantic_aliases[@]}"; do
     register_git_alias $semantic_alias
   done
+
+   
+   semantic="$($GitCommands/git-semantic)"
+   semantic="${semantic//$'\t'/'\t'}"
+   semantic="${semantic//$'\n'/'\n'}"
+   semanticcommand="'!printf "\"$semantic\""'"
+   semanticalias="git config --global alias.semantic "$semanticcommand" --replace-all"
+
+    eval $semanticalias
 
   # git-extras chore/refactor compatibility (https://github.com/tj/git-extras)
   # Docs: https://github.com/tj/git-extras/blob/master/Commands.md#git-featurerefactorbugchore
