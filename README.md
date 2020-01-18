@@ -23,17 +23,18 @@ These are **very simple** custom git commands that enforce the git user to write
 
 New command -> what it does:
 
-* ```git feat "commit message here"``` -> ```git commit -m 'feat: commit message here'```
-* ```git docs "commit message here"``` -> ```git commit -m 'docs: commit message here'```
-* ```git chore "commit message here"``` -> ```git commit -m 'chore: commit message here'```
-* ```git fix "commit message here"``` -> ```git commit -m 'fix: commit message here'```
-* ```git refactor "commit message here"``` -> ```git commit -m 'refactor: commit message here'```
-* ```git style "commit message here"``` -> ```git commit -m 'style: commit message here'```
-* ```git test "commit message here"``` -> ```git commit -m 'test: commit message here'```
+* ```git feat "A new feature"``` -> ```git commit -m 'feat: A new feature'```
+* ```git docs "Documentation only changes"``` -> ```git commit -m 'docs: Documentation only changes'```
+* ```git chore "updating gulp tasks etc."``` -> ```git commit -m 'chore: updating gulp tasks etc.'```
+* ```git fix "A bug fix"``` -> ```git commit -m 'fix: A bug fix'```
+* ```git refactor "A code change that neither fixes a bug nor adds a feature"``` -> ```git commit -m 'refactor: A code change that neither fixes a bug nor adds a feature'```
+* ```git style "Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)"``` -> ```git commit -m 'style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)'```
+* ```git test "Adding missing tests or correcting existing tests"``` -> ```git commit -m 'test: Adding missing tests or correcting existing tests'```
 * ```git localize "commit message here"``` -> ```git commit -m 'localize: commit message here'```
-* ```git ci "commit message here"``` -> ```git commit -m 'ci: commit message here'```
-* ```git vendor "commit message here"``` -> ```git commit -m 'vendor: commit message here'```
-* ```git build "commit message here"``` -> ```git commit -m 'build: commit message here'```
+* ```git ci "Changes to our CI configuration files and scripts (example scopes: Circle, BrowserStack, SauceLabs)"``` -> ```git commit -m 'ci: Changes to our CI configuration files and scripts (example scopes: Circle, BrowserStack, SauceLabs)'```
+* ```git vendor "update version for dependencies, packages"``` -> ```git commit -m 'vendor: update version for dependencies, packages'```
+* ```git build "Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)"``` -> ```git commit -m 'build: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)'```
+* ```git perf "A code change that improves performance"``` -> ```git commit -m 'perf: A code change that improves performance'```
 
 If you would like to add an optional scope, as described [here](https://conventionalcommits.org/), use the '-s' flag and quote the scope message:
 
